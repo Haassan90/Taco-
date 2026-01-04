@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tassine Alledine - Live Production Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+    <!-- ===== LOGIN SECTION ===== -->
+    <div id="login-section">
+        <div class="login-box">
+            <h1>Welcome to Taco Group</h1>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== DASHBOARD SECTION ===== -->
+    <div id="dashboard-section" class="hidden">
+
+        <!-- HEADER -->
+        <header>
+            <h1>
+                <img src="data:image/jpeg;base64,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" alt="Company Logo">
+                Tassine Alledine
+            </h1>
+            <p id="dashboard-subtitle">Production Manager / Operator View</p>
+        </header>
+
+        <!-- LOCATIONS AND MACHINES -->
+        <main>
+            <section id="locations">
+                <!-- Locations will be dynamically added here by JS -->
+            </section>
+            <main>
+    <!-- LOCATIONS AND MACHINES -->
+    <section id="locations">
+        <!-- Locations will be dynamically added here by JS -->
+    </section>
+
+    
+        </main>
+
+        <footer>
+            <p>© 2026 Tassine Alledine | Live Production Tracking System</p>
+        </footer>
+
+    </div>
+<script src="script.js"></script>
+
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+/* ===== GENERAL ===== */
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0; padding:0;
+    background:#f4f6f8;
+}
+.hidden { display:none; }
+
+/* ===== LOGIN SECTION ===== */
+#login-section {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:linear-gradient(135deg,#0062cc,#00c6ff);
+    color:#fff;
+}
+.login-box {
+    background:rgba(255,255,255,0.1);
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    width:340px;
+    text-align:center;
+}
+.login-box h1 {
+    margin-bottom:25px;
+    font-size:1.8em;
+}
+.login-box input {
+    padding:12px;
+    margin-bottom:18px;
+    border-radius:8px;
+    border:none;
+    width:100%;
+    font-size:1em;
+}
+.login-box input:focus {
+    outline:none;
+    box-shadow:0 0 8px #00fff0;
+}
+.login-box button {
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#28a745;
+    font-size:1.1em;
+    cursor:pointer;
+    transition:0.3s;
+}
+.login-box button:hover { background:#218838; }
+
+/* ===== DASHBOARD HEADER ===== */
+header {
+    background:#004085;
+    color:#fff;
+    text-align:center;
+    padding:20px 10px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.2);
+}
+header h1 {
+    margin:0;
+    font-size:2em;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+header img { height:40px; }
+header p {
+    margin:5px 0 0 0;
+    font-size:1.2em;
+}
+
+/* ===== LOCATIONS ===== */
+#locations {
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    padding:20px;
+}
+
+.location-card {
+    background:#fff;
+    border-radius:15px;
+    padding:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+.location-card h2 {
+    margin-top:0;
+    color:#004085;
+}
+
+/* ===== MACHINES GRID ===== */
+.machines-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin-top:15px;
+}
+
+.machine-card {
+    background:#f8f9fa;
+    border-radius:12px;
+    padding:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.machine-card:hover {
+    transform:translateY(-5px);
+    box-shadow:0 6px 18px rgba(0,0,0,0.2);
+}
+.machine-card h3 { margin:0 0 10px 0; color:#333; }
+.machine-card p { margin:4px 0; font-weight:500; font-size:0.95em; }
+
+/* ===== STATUS BADGES ===== */
+.status-badge {
+    padding:4px 10px;
+    border-radius:12px;
+    color:white;
+    font-weight:bold;
+    font-size:0.85em;
+}
+.status-free { background:#28a745; }
+.status-running { background:#ffc107; color:black; }
+.status-stopped { background:#dc3545; }
+
+/* ===== PROGRESS BAR ===== */
+.progress-container {
+    background:#e0e0e0;
+    border-radius:12px;
+    height:12px;
+    width:100%;
+    margin-top:5px;
+}
+.progress-bar {
+    height:100%;
+    border-radius:12px;
+    background:#28a745;
+    width:0%;
+    transition:width 0.5s;
+}
+
+/* ===== JOB CARD ===== */
+.job-card {
+    background:#fff3cd;
+    border:1px solid #ffeeba;
+    border-radius:10px;
+    padding:10px;
+    margin-top:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+.job-card h4 {
+    margin:0 0 5px 0;
+    font-size:1em;
+    color:#856404;
+}
+.job-card p {
+    margin:3px 0;
+    font-size:0.9em;
+    color:#856404;
+}
+
+/* ===== INPUTS & BUTTONS INSIDE MACHINE CARD ===== */
+.machine-card input[type="number"] {
+    width:60px;
+    padding:4px;
+    margin-top:5px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+.machine-card button {
+    margin-top:8px;
+    padding:6px 12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+    font-size:0.9em;
+}
+.start-btn { background:#28a745; color:white; }
+.start-btn:hover { background:#218838; }
+.stop-btn { background:#dc3545; color:white; }
+.stop-btn:hover { background:#c82333; }
+
+/* ===== FOOTER ===== */
+footer {
+    background:#343a40;
+    color:white;
+    text-align:center;
+    padding:12px;
+    margin-top:20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .machines-grid{ grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); }
+}
+@media(max-width:480px){
+    header h1{ font-size:1.5em; }
+}
